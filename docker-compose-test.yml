@@ -1,0 +1,13 @@
+version: "3.5"
+services:
+  db:
+    image: postgres:9.6.10
+    ports:
+    - 5432:5432
+    environment:
+    - POSTGRES_USER=demo-app
+    - POSTGRES_PASSWORD=demo   
+    - POSTGRES_DB=test
+    volumes:
+    - ./db/data:/var/lib/postgresql/data
+
